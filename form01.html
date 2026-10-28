@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscrição nos jogos escolares</title>
+</head>
+
+<body>
+    <header>
+        <h2>Inscrição nos jogos escolares</h2>
+        <p>Formulário demonstrativo. Utilize somente informações fictícias.
+            Campos identificados como obrigatórios devem ser preenchidos.</p>
+    </header>
+    <main>
+        <form id="inscricao-jogos" action="/inscricoes-jogos" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Indentificação do atleta</legend>
+                <label for="nome-atleta">Nome completo do atleta (obrigatório)</label>
+                <input type="text" id="nome-atleta" name="nome_atleta" required>
+                <br>
+                <label for="nomesocial-atleta">Nome social</label>
+                <input type="text" id="nomesocial-atleta" name="nomesocial-atleta" required>
+                <br>
+                <label for="matricula-atleta">Matrícula (obrigatório)</label>
+                <input type="number" id="matricula-atleta" name="matricula-atleta" required>
+                <br>
+                <label for="datanasc-atleta">Data de nascimento</label>
+                <input type="date" id="datanasc-atleta" name="datanasc-atleta" placeholder="dia/mês/ano" required>
+                <br>
+                <label for="email-atleta">E-mail(obrigatório)</label>
+                <input type="email" id="email-atleta" name="email_atleta" placeholder="exemploemail@gmail.com" required>
+                <br>
+                <label for="telefone-atleta">Telefone</label>
+                <input type="number" id="telefone-atleta" name="telefone-atleta" required>
+                <br>
+                <label for="site-atleta">Site da escola</label>
+                <input type="url" id="site-atleta" name="site-atleta" placeholder="https://__________________________" required>
+
+            </fieldset>
+            <fieldset>
+                <legend>Escola e delegação</legend>
+                <label for="nome-escola">Escola com sugestões</label>
+                <input type="search" id="nome-escola" list="lista-escolas">
+                <datalist id="lista-escolas">
+                    <option>Amiguinhos de infância</option>
+                    <option>EEEP Francisca de Albuquerque Moura</option>
+                    <option>IFCE Campus Cedro</option>
+                </datalist>
+                <br>
+                <label for="turma-escola">Turma</label>
+                <select>
+                    <option>Ensino fundamental: 8 ano, 9 ano</option>
+                    <option>Ensino Medio: 1 ano, 2 ano, 3 ano</option>
+                </select>
+                <br>
+                <label for="Equipe-escola">Equipe</label>
+                <input type="text" id="Equipe-escola" name="Equipe-escola" placeholder="Equipe horizonte" required>
+                <br>
+                <label for="professor-escola">Professor responsável</label>
+                <input type="text" id="professor-escola" name="professor-escola" required>
+                <br>
+                <label for="telprofessor-escola">Telefone do professor</label>
+                <input type="text" id="telprofessor-escola" name="telprofessor-escola" required>
+            </fieldset>
+
+
+
+
+        </form>
+    </main>
+</body>
+
+</html>
