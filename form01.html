@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inscrição nos jogos escolares</title>
 </head>
-
 <body>
     <header>
         <h2>Inscrição nos jogos escolares</h2>
@@ -17,31 +15,31 @@
         <form id="inscricao-jogos" action="/inscricoes-jogos" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>Indentificação do atleta</legend>
-                <label for="nome-atleta">Nome completo do atleta (obrigatório)</label>
+                <label for="nome-atleta">Nome completo do atleta (obrigatório):</label>
                 <input type="text" id="nome-atleta" name="nome_atleta" required>
                 <br>
-                <label for="nomesocial-atleta">Nome social</label>
-                <input type="text" id="nomesocial-atleta" name="nomesocial-atleta" required>
+                <label for="nomesocial-atleta">Nome social:</label>
+                <input type="text" id="nomesocial-atleta" name="nomesocial-atleta">
                 <br>
-                <label for="matricula-atleta">Matrícula (obrigatório)</label>
+                <label for="matricula-atleta">Matrícula (obrigatório):</label>
                 <input type="number" id="matricula-atleta" name="matricula-atleta" required>
                 <br>
-                <label for="datanasc-atleta">Data de nascimento</label>
-                <input type="date" id="datanasc-atleta" name="datanasc-atleta" placeholder="dia/mês/ano" required>
+                <label for="datanasc-atleta">Data de nascimento:</label>
+                <input type="date" id="datanasc-atleta" name="datanasc-atleta" placeholder="dia/mês/ano">
                 <br>
-                <label for="email-atleta">E-mail(obrigatório)</label>
+                <label for="email-atleta">E-mail(obrigatório):</label>
                 <input type="email" id="email-atleta" name="email_atleta" placeholder="exemploemail@gmail.com" required>
                 <br>
-                <label for="telefone-atleta">Telefone</label>
-                <input type="number" id="telefone-atleta" name="telefone-atleta" required>
+                <label for="telefone-atleta">Telefone:</label>
+                <input type="number" id="telefone-atleta" name="telefone-atleta" >
                 <br>
-                <label for="site-atleta">Site da escola</label>
-                <input type="url" id="site-atleta" name="site-atleta" placeholder="https://__________________________" required>
+                <label for="site-atleta">Site da escola:</label>
+                <input type="url" id="site-atleta" name="site-atleta" placeholder="https://__________________________" >
 
             </fieldset>
             <fieldset>
                 <legend>Escola e delegação</legend>
-                <label for="nome-escola">Escola com sugestões</label>
+                <label for="nome-escola">Escola com sugestões:</label>
                 <input type="search" id="nome-escola" list="lista-escolas">
                 <datalist id="lista-escolas">
                     <option>Amiguinhos de infância</option>
@@ -49,29 +47,130 @@
                     <option>IFCE Campus Cedro</option>
                 </datalist>
                 <br>
-                <label for="turma-escola">Turma</label>
+                <label for="turma-escola">Turma:</label>
                 <select>
-                    <option>Ensino fundamental: 8 ano, 9 ano</option>
+                    <option selected>Ensino fundamental: 8 ano, 9 ano</option>
                     <option>Ensino Medio: 1 ano, 2 ano, 3 ano</option>
                 </select>
                 <br>
-                <label for="Equipe-escola">Equipe</label>
-                <input type="text" id="Equipe-escola" name="Equipe-escola" placeholder="Equipe horizonte" required>
+                <label for="Equipe-escola">Equipe:</label>
+                <input type="text" id="Equipe-escola" name="Equipe-escola" placeholder="Equipe horizonte" value="Equipe horizonte" >
                 <br>
-                <label for="professor-escola">Professor responsável</label>
-                <input type="text" id="professor-escola" name="professor-escola" required>
+                <label for="professor-escola">Professor responsável:</label>
+                <input type="text" id="professor-escola" name="professor-escola" >
                 <br>
-                <label for="telprofessor-escola">Telefone do professor</label>
-                <input type="text" id="telprofessor-escola" name="telprofessor-escola" required>
+                <label for="telprofessor-escola">Telefone do professor:</label>
+                <input type="text" id="telprofessor-escola" name="telprofessor-escola" >
             </fieldset>
             <fieldset>
                 <legend>Participação nos Jogos</legend>
-                <label for="turno-jogos">Turno de preferência</label>
+                    <label for="jogos-jogos">Modalidade principal (obrigatória):</label>
+                    <select id="jogos-jogos" required>
+                        <optgroup label="Coletivas">
+                            <option value="Futsal">Futsal</option>
+                            <option value="Voleibol">Voleibol</option>
+                            <option value="Basquete">Basquete</option>
+                            <option value="Handebol">Handebol</option>
+                        </optgroup>
+                      <optgroup label="Inviduais">
+                            <option value="atividades">Atletismo</option>
+                            <option value="Natação">Natação</option>
+                            <option value="Xadrez">Xadrez</option>
+                            <option value="tenis de mesa">Tênis de mesa</option>
+                        </optgroup>                        
+                    </select>
+                <fieldset>
+                    <legend>
+                        Turno de preferência:
+                    </legend>
                 <input type="radio" id="turno-jogos" name="turno-jogos" value="Manha">
+                <label for="turno-jogos">Manhã</label>
+                <input type="radio" id="turno-jogos" name="turno-jogos" value="Tarde">
+                <label for="turno-jogos">Tarde</label>
+                <input type="radio" id="turno-jogos" name="turno-jogos" value="Noite">
+                <label for="turno-jogos">Noite</label>                   
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Modalidade de Interesse:
+                    </legend>
+                <input type="checkbox" id="modalidade-jogos" name="modalidade-jogos" value="Futsal">
+                <label for="modalidade-jogos">Futsal</label>
+                <input type="checkbox" id="modalidade-jogos" name="modalidade-jogos" value="Handebol" >
+                <label for="modalidade-jogos">Handebol</label>
+                <br>
+                <input type="checkbox" id="modalidade-jogos" name="modalidade-jogos" value="Xadrez" >
+                <label for="modalidade-jogos">Xadrez</label>
+                <input type="checkbox" id="modalidade-jogos" name="modalidade-jogos" value="Voleibol" checked="">
+                <label for="modalidade-jogos">Voleibol</label>
+                <br>                
+                <input type="checkbox" id="modalidade-jogos" name="modalidade-jogos" value="Atletismo" >
+                <label for="modalidade-jogos">Atletismo</label>
+                <input type="checkbox" id="modalidade-jogos" name="modalidade-jogos" value="Tênis" >
+                <label for="modalidade-jogos">Tênis de mesa</label>                
+                </fieldset>
+
+                <br>
+                <label>Tamanho da camiseta:</label>
+                <select>
+                    <option value="PP">PP</option>
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>  
+                </select>
+                <br>
+                <fieldset>
+                    <legend>
+                        Participação em atividades complementares:
+                    </legend>
+                    <input type="checkbox" id="participacao-jogos" name="participacao-jogos" value="Cerimônia" >
+                    <label for="participacao-jogos">Cerimônia de abertura</label> <br>
+                    <input type="checkbox" id="participacao-jogos" name="participacao-jogos" checked value="Oficina">
+                    <label for="participacao-jogos">Oficina de arbitragem</label><br>
+                    <input type="checkbox" id="participacao-jogos" name="participacao-jogos" value="Organização">
+                    <label for="participacao-jogos">Organização das equipes</label>
+                </fieldset>
+                <label for="acompanhantes-jogos">Quantidade de acompanhantes:</label>
+                <input type="number" id="acompanhantes-jogos" name="acompanhantes-jogos" value="2">
             </fieldset>
-            <br>
+            <fieldset>
+                <legend>Preferências, anexos e observações:</legend>
+                <label for="cor-pref">Cor da delegação</label>
+                <input type="color" id="cor-pref" name="cor-pref">
+                <br>
+                <label for="range-pref">Interessenas atividades complementares, de 0 a 100:</label>
+                <input type="range" id="range-pref" name="range-pref" min="0" max="100">
+                <br>
+                <label for="file-pref">Documento fictício:</label>
+                <input type="file" id="file-pref" name="file-pref"> 
+                <br>
+                <label for="textarea-jogos">Observações para a organização:</label> <br>
+                <textarea id="textarea-jogos" rows="5" cols="50">
+                    
+                </textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Demostrações e Confirmação</legend>
+                <label for="senha-demostracao">Senha fictícia:</label>
+                <input type="password" id="senha-demostracao" name="senha-demostracao" >
+                <p>Esta demonstração não cria uma conta.</p>
+                Exemplo fixo: 1 atleta + 2 acompanhantes.Total de pessoas:<output for="acompanhantes-jogos" name="total_exemplo">3</output> <br>
+                <input type="checkbox" id="aceito-demostacao" name="aceito-demostacao" value="orientações" required >
+                <label for="aceito-demostacao">Li as orientações desta atividade (obrigatório).</label> <br>
+                <button type="submit" id="enviar-demostracao" name="enviar-demostracao">Confirmar Inscrição</button>
+                <input type="submit" id="enviar-demostracao" name="enviar-demostracao" value="Enviar Inscrição">               
+                <input type="reset" id="reset-demostracao" name="reset-demostracao" value="Restaurar valores iniciais" >
+                <input type="button" id="enviar-demostracao" name="enviar-demostracao" value="Ajuda demostrativa" ><br>
+                <p>A ajuda não possui ação adicional nesta parte.
+                
+                    A submissão não conclui um cadastro real nesta verão.
+                </p>
+            </fieldset>
+            <input type="hidden" name="edicao" value="jogos-2026">
+            
         </form>
     </main>
 </body>
-
 </html>
