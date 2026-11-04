@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscrição nos jogos escolares</title>
+</head>
+
+<body>
+    <header>
+        <img src="image.png" alt="simbolo IFCE" width="500" height="auto">
+        <h2>Guia de Requerimento</h2>
+        <p>Formulário demonstrativo. Utilize somente informações fictícias.
+            Campos identificados como obrigatórios devem ser preenchidos.</p>
+    </header>
+    <main>
+        <form id="requerimento-ficha" action="/requerimento-ficha" method="post" enctype="multipart/form-data">
+            <label for="protocolo-ficha">Protocolo nº:</label>
+            <input type="number" id="protocolo-ficha" name="protocolo-ficha" required>
+            <fieldset>
+                <fieldset>
+                    <legend>
+                        Informações do aluno
+                    </legend>
+                    <label for="requerente-aluno">Requerente:</label>
+                    <input type="text" id="requerente-aluno" name="requerente-aluno" required> <br>
+                    <label for="matricula-aluno">Nº de Matrícula:</label>
+                    <input type="number" id="matricula-aluno" name="matricula-aluno" required> <br>
+                    <label for="data-aluno">Data nascimento:</label>
+                    <input type="date" id="data-aluno" name="data-aluno"> <br>
+                    <label for="naturalidade-aluno">Naturalidade:</label>
+                    <input type="text" id="naturalidade-aluno" name="naturalidade-aluno"> <br>
+                    <label for="filiacao-aluno">Filiação:</label>
+                    <input type="text" id="filiacao-aluno" name="filiacao-aluno"> <br>
+                    <label for="curso-aluno">Curso:</label>
+                    <select id="curso-aluno" name="curso-aluno" required>
+                        <optgroup label=" Cursos Técnicos">
+                            <option>Eletrotécnica</option>
+                            <option selected>Informática</option>
+                            <option>Mecânica</option>
+                        </optgroup>
+                        <optgroup label="Cursos Superiores">
+                            <option>Bacharelado Engenharia Eletríca</option>
+                            <option>Bacharelado Sistemas de Informações</option>
+                            <option>Bacharelado Engenharia Mecânica</option>
+                            <option>Tecnológo em Mecatrônica</option>
+                            <option>Licenciatura em Física</option>
+                            <option>Licenciatura em Matemática</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <label for="periodo-aluno">Período</label>
+                    <input type="text" id="periodo-aluno" name="periodo-aluno" placeholder="ex.: Primeiro Semestre" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Assinale</legend>
+                    <input type="checkbox" id="assinale-assinale" name="via-assinale" value="2-via">
+                    <label for="assinale-assinale">2° Via (especificar):</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="aproveitamento-assinale" value="aproveitamento">
+                    <label for="assinale-assinale">Aproveitamento de Disciplina:</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="foraprazo-assinale" value="matricula-fora-prazo">
+                    <label for="assinale-assinale">Matrícula fora do prazo (justificar):</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="cancelamento-assinale" value="cancelameto-matricula">
+                    <label for="assinale-assinale">Cancelamento da matrícula:</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="colacao-assinale" value="colacao-grau">
+                    <label for="assinale-assinale">Colação de grau / Colação Especial (justificar):</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="declaracao-assinale" value="declaracao">
+                    <label for="assinale-assinale">Declaração (especificar):</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="diploma-assinale" value="diploma">
+                    <label for="assinale-assinale">Diploma (especificar):</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="historico-assinale" value="historico">
+                    <label for="assinale-assinale">Histórico escolar:</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="reabetura-assinale" value="reabertura">
+                    <label for="assinale-assinale">Reabertura de Matrícula:</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="segunda-assinale" value="segunda-chamada">
+                    <label for="assinale-assinale">Segunda Chamada (anexar justificatica a expecíficar)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="reingresso-assinale" value="reingresso">
+                    <label for="assinale-assinale">Reingresso</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="tracanmento-assinale" value="trancamento-disciplica">
+                    <label for="assinale-assinale">Tracamento de Disciplina</label> 
+                    <br>
+                    
+                </fieldset>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
