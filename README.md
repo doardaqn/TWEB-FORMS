@@ -3,8 +3,8 @@
 
 **Nome:** Maria Eduarda Lima de Aquino
 
-**Atividade:** Aula 06 — Parte 01
+**Atividade:** Aula 06 — Parte 02
 
 ## Como abrir
 
-Abra o arquivo `form01.html` em um navegador, como Google Chrome.
+Abra o arquivo `form02.html` em um navegador, como Google Chrome.
