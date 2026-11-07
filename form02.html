@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guia de Requerimento</title>
+</head>
+<style>
+    body{
+        background-color: F1F6F2;
+    }
+    button{
+        background-color: 176B3A;
+        padding: 10px 20px;
+        margin-top:10px;
+        color: white;
+    }
+    .cabecalho{
+        display: flex;
+    }
+    .Vistos{
+        display: flex;
+        width: 100%;
+        gap: 10;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <img src="img2.png" alt="simbolo IFCE" width="75px" height="100px">
+            <div>
+                <h2 style="color:176B3A; margin-bottom:0; margin-top:8px; ">INSTITUTO FEDERAL DO CEARÁ</h2>
+                <p style="margin-top:0;">Campus Cedro</p>
+            </div>
+
+        </div>
+        <h2 style="margin-bottom:0;">Guia de Requerimento</h2>
+        <p style="margin-top:0">Formulário demonstrativo. Utilize somente informações fictícias.
+            </p>
+    </header>
+    <hr style="border: none; height: 2px; background-color: #176B3A; margin: 15px 0;">
+    <main>
+        <form id="requerimento-ficha" action="/requerimento-ficha" method="post" enctype="multipart/form-data">
+            <label for="protocolo-ficha">Protocolo nº:</label>
+            <input type="number" id="protocolo-ficha" name="protocolo-ficha" required placeholder="Digite o número do protocolo">
+            <fieldset>
+                <fieldset>
+                    <legend>
+                        Informações do aluno
+                    </legend>
+                    <label for="requerente-aluno">Requerente:</label>
+                    <input type="text" id="requerente-aluno" name="requerente-aluno" placeholder="Digite seu nome" required> <br>
+                    <label for="matricula-aluno">Nº de Matrícula:</label>
+                    <input type="number" id="matricula-aluno" name="matricula-aluno" placeholder="Digite sua matrícula" required> <br>
+                    <label for="data-aluno">Data nascimento:</label>
+                    <input type="date" id="data-aluno" name="data-aluno"> <br>
+                    <label for="naturalidade-aluno">Naturalidade:</label>
+                    <input type="text" id="naturalidade-aluno" name="naturalidade-aluno" placeholder="ex.:Cedro"> <br>
+                    <label for="filiacao-aluno">Filiação:</label>
+                    <input type="text" id="filiacao-aluno" name="filiacao-aluno" placeholder="Digite o nome do(a) seu(sua) pai/mãe"> <br>
+                    <label for="curso-aluno">Curso:</label>
+                    <select id="curso-aluno" name="curso-aluno" required>
+                        <optgroup label=" Cursos Técnicos">
+                            <option>Eletrotécnica</option>
+                            <option selected>Informática</option>
+                            <option>Mecânica</option>
+                        </optgroup>
+                        <optgroup label="Cursos Superiores">
+                            <option>Bacharelado Engenharia Eletríca</option>
+                            <option>Bacharelado Sistemas de Informações</option>
+                            <option>Bacharelado Engenharia Mecânica</option>
+                            <option>Tecnológo em Mecatrônica</option>
+                            <option>Licenciatura em Física</option>
+                            <option>Licenciatura em Matemática</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <label for="periodo-aluno">Período</label>
+                    <input type="text" id="periodo-aluno" name="periodo-aluno" placeholder="ex.: Primeiro Semestre" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Assinale</legend>
+                    <input type="checkbox" id="assinale-assinale" name="via-assinale" value="2-via">
+                    <label for="assinale-assinale">2° Via (especificar)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="aproveitamento-assinale" value="aproveitamento">
+                    <label for="assinale-assinale">Aproveitamento de Disciplina(anexar Histórico Escolar e Programa da Dlsciplina)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="foraprazo-assinale" value="matricula-fora-prazo">
+                    <label for="assinale-assinale">Matrícula Fora do Prazo (justificar)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="cancelamento-assinale" value="cancelameto-matricula">
+                    <label for="assinale-assinale">Cancelamento da Matrícula</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="colacao-assinale" value="colacao-grau">
+                    <label for="assinale-assinale">Colação de Grau / Colação Especial (justificar)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="declaracao-assinale" value="declaracao">
+                    <label for="assinale-assinale">Declaração (especificar)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="diploma-assinale" value="diploma">
+                    <label for="assinale-assinale">Diploma (especificar)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="historico-assinale" value="historico">
+                    <label for="assinale-assinale">Histórico Escolar</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="reabetura-assinale" value="reabertura">
+                    <label for="assinale-assinale">Reabertura de Matrícula</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="segunda-assinale" value="segunda-chamada">
+                    <label for="assinale-assinale">Segunda Chamada (anexar justificatica a expecíficar)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="reingresso-assinale" value="reingresso">
+                    <label for="assinale-assinale">Reingresso</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="tracanmento-assinale" value="trancamento-disciplica">
+                    <label for="assinale-assinale">Tracamento de Disciplina</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="tracanmentom-assinale" value="trancamento-matricula">
+                    <label for="assinale-assinale">Tracamento de Matricula(anexar documentação comprobátoria)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="transferencia-assinale" value="transferencia">
+                    <label for="assinale-assinale">Transferência para Outra instituição</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="validacao-assinale" value="validacao">
+                    <label for="assinale-assinale">Validação de Conhecimento(especificar)</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="reajuste-assinale" value="reajuste">
+                    <label for="assinale-assinale">Reajuste</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="recorrecao-assinale" value="recorrecao">
+                    <label for="assinale-assinale">Recorreção de Prova</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="auxilio1-assinale" value="transporte">
+                    <label for="assinale-assinale">AUXILIO: Transporte</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="auxilio2-assinale" value="Moradia">
+                    <label for="assinale-assinale">AUXILIO: Moradia</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="auxilio3-assinale" value="Oculos">
+                    <label for="assinale-assinale">AUXILIO: Óculos</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="auxilio4-assinale" value="Oculos">
+                    <label for="assinale-assinale">AUXILIO: Pais e Mães</label> 
+                    <br>
+                    <input type="checkbox" id="assinale-assinale" name="outros-assinale" value="outros">
+                    <label for="assinale-assinale">Outros (especificar)</label> 
+                    <br>
+                    <label for="especificar-assinale">Especificar</label><br>
+                    <textarea id="especificar-assinale" name="especificar-assinale" rows="5" cols="50">
+                    </textarea><br>
+                    <label for="justificar-assinale">Justificar</label><br>
+                    <textarea id="justificar-assinale" name="justificar-assinale" rows="5" cols="50">
+                    </textarea> <br><br>
+                    <label for="file-requerimento">Anexar Documentação(se necessário):</label>
+                    <input type="file" id="file-requerimento" name="file-requerimento">
+                </fieldset>
+                <br>
+                <input type="checkbox" id="declaro-requerimento" name="declaro-requerimento"required="">
+                <label for="declaro-requerimento">Declaro conhecer o regimento desta IFE, bem como o prazo necessário à tramitação do processo
+                </label>
+                <br><br>
+                <fieldset>
+                    <label for="requerente2-aluno">Requerente:</label>
+                    <input type="text" id="requerente2-aluno" name="requerente2-aluno" placeholder="Digite o nome do requerente" required>
+                    <label for="funcionario-aluno">Funcionário:</label>
+                    <input type="text" id="funcionario-aluno" name="funcionario-aluno" placeholder="Digite o nome do funcionario" required><br>
+                    <label for="local-requerimento">Cedro - CE,</label>
+                    <input type="date" id="local-requerimento" name="local-requerimento" >
+                </fieldset>
+                <br>
+                <div class="Vistos">
+                    <div style="width:50%; height:50%">
+                        <fieldset>
+                            <h4>Visto(Cordenação de assuntos Estudantis)</h4>
+                            <input type="radio" id="visto-requerimento" name="visto-requerimento" value="visto_completo">
+                            <label>0 requirente NÃO deve chave do armário</label><br>
+                            <input type="radio" id="visto-requerimento" value="visto_incompleto">
+                            <label>O requirente DEVE chave do armário</label> <br>
+                            <label for="responsavel-aluno">Responsável:</label>
+                            <input type="text" id="responsavel-aluno" name="responsavel-aluno" placeholder="Digite o nome do responsável"  required>
+                        </fieldset>
+                    </div>
+                    <div style="width:50%; height:50%;">
+                        <fieldset >
+                            <h4>Visto (Biblioteca)</h4>
+                            <input type="radio" id="visto2-requerimento" name="visto2-requerimento" value="visto2_completo">
+                            <label>0 roquerente NÃO deve livros na biblioteca</label> <br>
+                            <input type="radio" id="visto2-requerimento" value="visto2_incompleto">
+                            <label>O requirente DEVE livro na biblioteca</label> <br>
+                            <label for="responsavel2-aluno">Responsável:</label>
+                            <input type="text" id="responsavel2-aluno" name="responsavel2-aluno" placeholder="Digite o nome do responsável" required>
+
+                        </fieldset>
+                    </div>
+                </div>
+                <button type="submit">Enviar Requerimento</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
